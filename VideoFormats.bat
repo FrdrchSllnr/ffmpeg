@@ -1,20 +1,19 @@
 REM   Template for various video formats
+REM   check the official encoding wiki: https://trac.ffmpeg.org/wiki
 
 
-REM   Cconverting mp4 to webm and vice versa 
-REM   Overwriting (disabled?)enabled with -n in 2nd pass
 REM   for %%i in ("*.mp4") do echo %%~ni >> echo filename only
 
 REM   Constant bitrate : -crf 0-51  lower is better (  subjectively sane range is 17–28. Consider 17 or 18 to be visually lossless or nearly)
 REM   Variable bitrate: -b:v 3M   means 3MBit/s
 REM   Set audio bitrate with -b:a 96k
 
-REM   variable 
+REM   batch variables 
 REM   SET myvar=4
 REM   SET /A myvar=2+2
 
 SET crfv=23
-SET bv=5000k
+SET bv=4000k
 SET bvm=5000k
 SET buf=3500k
 SET ba=128k
